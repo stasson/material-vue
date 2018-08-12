@@ -1,0 +1,15 @@
+{
+  "command": {
+    "init": {
+      "exact": true
+    }
+  },
+  "packages": [
+    "packages/*"
+  ],
+  "publish": {
+    "allowBranch": "master",
+    "message": "chore(release): publish %s"    
+  },
+  "version": "0.0.0"
+}

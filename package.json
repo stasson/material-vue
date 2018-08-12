@@ -1,0 +1,40 @@
+{
+  "name": "material-vue",
+  "private": true,
+  "scripts": {
+    "bootstrap": "lerna bootstrap --hoist",
+    "release": "lerna version --conventional-commits",
+    "commit": "git cz",
+    "lint:commit": "commitlint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stasson/material-vue.git"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "scope-empty": [
+        1,
+        "never"
+      ]
+    }
+  },
+  "gitHooks": {
+    "commit-msg": "commitlint -E GIT_PARAMS"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^7.0.0",
+    "@commitlint/config-conventional": "^7.0.1",
+    "commitizen": "^2.10.1",
+    "lerna": "3.0.3",
+    "yorkie": "^2.0.0"
+  }
+}
